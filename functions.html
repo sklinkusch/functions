@@ -35,18 +35,15 @@
       const sideProjects = 150;
       let totalIncome = 0;
       let totalExpenses = 0;
-      const addExpenses = function(input) {
-        totalExpenses = totalExpenses + input;
+      const addTo = function(total, valueToAdd) {
+        return total + valueToAdd;
       };
-      const addIncome = function(input) {
-        totalIncome = totalIncome + input;
-      };
-      addExpenses(flatFee);
-      addExpenses(telephone);
-      addExpenses(water);
-      addExpenses(electricity);
-      addIncome(income);
-      addIncome(sideProjects);
+      totalExpenses = addTo(totalExpenses, flatFee);
+      totalExpenses = addTo(totalExpenses, telephone);
+      totalExpenses = addTo(totalExpenses, water);
+      totalExpenses = addTo(totalExpenses, electricity);
+      totalIncome = addTo(totalIncome, income);
+      totalIncome = addTo(totalIncome, sideProjects);
       const whatDoIHaveForLiving = totalIncome - totalExpenses;
       console.log(whatDoIHaveForLiving);
 
