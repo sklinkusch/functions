@@ -33,14 +33,23 @@
       // Incomes
       const income = 2000;
       const sideProjects = 150;
+      let totalIncome = 0;
       let totalExpenses = 0;
-      const addExpenses = function(expense) {
-        const currentExpenses = totalExpenses;
-        totalExpenses = currentExpenses + expense;
+      const addExpenses = function(input) {
+        totalExpenses = totalExpenses + input;
+      };
+      const addIncome = function(input) {
+        totalIncome = totalIncome + input;
       };
       addExpenses(flatFee);
       addExpenses(telephone);
-      console.log(totalExpenses);
+      addExpenses(water);
+      addExpenses(electricity);
+      addIncome(income);
+      addIncome(sideProjects);
+      const whatDoIHaveForLiving = totalIncome - totalExpenses;
+      console.log(whatDoIHaveForLiving);
+
       // Greeting Function
       // const greeting = function(person) {
       //   console.log("Hello " + person.name);
