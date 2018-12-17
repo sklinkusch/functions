@@ -25,17 +25,27 @@
       // const ageStefan = WhatIsTheAgeOf(stefan.yearOfBirth);
       // console.log(ageStefan);
       // Calculating the monthly income and expenses
-      // const flatFee = 400;
-      // const telephone = 20;
-      // const income = 2000;
-      // const water = 30;
-      // const electricity = 200;
-      // const sideProjects = 150;
-      // Greeting Function
-      const greeting = function(person) {
-        console.log("Hello " + person.name);
+      // Costs
+      const flatFee = 400;
+      const telephone = 20;
+      const water = 30;
+      const electricity = 200;
+      // Incomes
+      const income = 2000;
+      const sideProjects = 150;
+      let totalExpenses = 0;
+      const addExpenses = function(expense) {
+        const currentExpenses = totalExpenses;
+        totalExpenses = currentExpenses + expense;
       };
-      greeting(stefan);
+      addExpenses(flatFee);
+      addExpenses(telephone);
+      console.log(totalExpenses);
+      // Greeting Function
+      // const greeting = function(person) {
+      //   console.log("Hello " + person.name);
+      // };
+      // greeting(stefan);
     </script>
   </body>
 </html>
