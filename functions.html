@@ -8,6 +8,7 @@
   </head>
   <body>
     <script>
+      // Example 1
       // Objects
       const stefan = {
         name: "Stefan",
@@ -15,14 +16,26 @@
         yearOfBirth: 1983
       };
       // Definition of a function calculating the age
-      const WhatIsTheAgeOf = function(theYearOfBirth) {
-        const currentYear = 2018;
-        const age = currentYear - theYearOfBirth;
-        return age;
-      };
+      // const WhatIsTheAgeOf = function(theYearOfBirth) {
+      //   const currentYear = 2018;
+      //   const age = currentYear - theYearOfBirth;
+      //   return age;
+      // };
       // Call the function
-      const ageStefan = WhatIsTheAgeOf(stefan.yearOfBirth);
-      console.log(ageStefan);
+      // const ageStefan = WhatIsTheAgeOf(stefan.yearOfBirth);
+      // console.log(ageStefan);
+      // Calculating the monthly income and expenses
+      // const flatFee = 400;
+      // const telephone = 20;
+      // const income = 2000;
+      // const water = 30;
+      // const electricity = 200;
+      // const sideProjects = 150;
+      // Greeting Function
+      const greeting = function(person) {
+        console.log("Hello " + person.name);
+      };
+      greeting(stefan);
     </script>
   </body>
 </html>
